@@ -50,7 +50,11 @@ export function Header() {
     >
       <Container className="flex h-[var(--header-height)] items-center justify-between gap-2 sm:gap-4">
         <Link href="/" className="shrink-0" aria-label="Shree Deve Finance Frontiers home">
-          <Logo variant={overlay ? "light" : "dark"} />
+          <Logo
+            variant={overlay ? "light" : "dark"}
+            showWordmark={!mobileOpen}
+            className={mobileOpen ? "gap-2" : undefined}
+          />
         </Link>
 
         <nav
@@ -123,10 +127,11 @@ export function Header() {
           <button
             type="button"
             className={cn(
-              "inline-flex h-10 w-10 items-center justify-center rounded-full border lg:hidden",
+              "inline-flex h-10 w-10 items-center justify-center rounded-full border transition lg:hidden",
               overlay
                 ? "border-white/50 text-white"
                 : "border-[var(--color-border)] text-[#020617] bg-white",
+              mobileOpen && "bg-[#f8fafc] border-[#bfdbfe]",
             )}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -138,8 +143,8 @@ export function Header() {
       </Container>
 
       {mobileOpen ? (
-        <div className="fixed inset-x-0 top-[var(--header-height)] bottom-0 z-40 overflow-y-auto bg-white lg:hidden">
-          <nav className="space-y-1 px-4 py-4 pb-24" aria-label="Mobile">
+        <div className="fixed inset-x-0 top-[var(--header-height)] bottom-0 z-40 h-[calc(100dvh-var(--header-height))] overflow-y-auto border-t border-[var(--color-border)] bg-white lg:hidden">
+          <nav className="space-y-1 px-4 py-3 pb-24" aria-label="Mobile">
             {mainNavigation.map((item) => (
               <div
                 key={item.label}
