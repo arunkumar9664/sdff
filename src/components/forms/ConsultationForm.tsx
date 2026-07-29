@@ -44,9 +44,12 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
 
   return (
     <div
-      className={`rounded-[22px] bg-[var(--color-primary-navy)] p-6 md:p-7 text-white shadow-[var(--shadow-lg)] ${className}`}
+      className={`on-dark rounded-[22px] bg-[var(--color-primary-navy)] p-6 md:p-7 shadow-[var(--shadow-lg)] ${className}`}
     >
-      <h2 className="text-xl md:text-2xl font-bold !text-white leading-snug">
+      <h2
+        className="text-xl md:text-2xl font-bold leading-snug"
+        style={{ color: "#ffffff" }}
+      >
         Get a Free Consultation Today
       </h2>
       <form

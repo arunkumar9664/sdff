@@ -11,7 +11,7 @@ export function HomeHero() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative -mt-[var(--header-height)] min-h-[720px] overflow-hidden">
+    <section className="on-dark relative -mt-[var(--header-height)] min-h-[720px] overflow-hidden">
       <Image
         src={images.heroAlt}
         alt="Indian financial advisory supporting local business owners"
@@ -24,7 +24,7 @@ export function HomeHero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(11,21,38,0.82) 0%, rgba(11,21,38,0.55) 48%, rgba(11,21,38,0.35) 100%)",
+            "linear-gradient(90deg, rgba(7,17,31,0.88) 0%, rgba(7,17,31,0.62) 48%, rgba(7,17,31,0.4) 100%)",
         }}
         aria-hidden
       />
@@ -34,17 +34,22 @@ export function HomeHero() {
           initial={reduce ? false : { opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-white"
         >
           <p className="dot-label dot-label-light">
             Professional Financial Consulting
           </p>
-          <h1 className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] !text-white md:text-5xl lg:text-[3.35rem]">
-            Expert <span className="!text-[var(--color-sky)]">Financial</span>{" "}
-            Consulting For Long-Term{" "}
-            <span className="!text-[var(--color-sky)]">Stability</span>.
+          <h1
+            className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] md:text-5xl lg:text-[3.35rem]"
+            style={{ color: "#ffffff" }}
+          >
+            Expert{" "}
+            <span style={{ color: "#7dd3fc" }}>Financial</span> Consulting For
+            Long-Term <span style={{ color: "#7dd3fc" }}>Stability</span>.
           </h1>
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
+          <p
+            className="mt-5 max-w-lg text-base leading-relaxed md:text-lg"
+            style={{ color: "#e2e8f0" }}
+          >
             Responsible microfinance for rural and semi-urban India—JLG,
             individual loans, small business and agriculture support with clear,
             transparent guidance.
@@ -69,8 +74,11 @@ export function HomeHero() {
                 ),
               )}
             </div>
-            <p className="inline-flex items-center gap-1.5 text-sm font-medium text-white">
-              <Star className="h-4 w-4 fill-[var(--color-sky)] text-[var(--color-sky)]" />
+            <p
+              className="inline-flex items-center gap-1.5 text-sm font-semibold"
+              style={{ color: "#ffffff" }}
+            >
+              <Star className="h-4 w-4 fill-[#7dd3fc] text-[#7dd3fc]" />
               Trusted by communities we serve
             </p>
           </div>

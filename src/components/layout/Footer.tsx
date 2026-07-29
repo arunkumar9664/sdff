@@ -15,7 +15,7 @@ export function Footer() {
   ].filter((s) => isConfigured(s.href));
 
   return (
-    <footer className="bg-[var(--color-primary-navy)] text-white">
+    <footer className="on-dark bg-[var(--color-primary-navy)]">
       <Container className="py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">

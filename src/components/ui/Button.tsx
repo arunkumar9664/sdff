@@ -13,17 +13,18 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants: Record<ButtonVariant, string> = {
+  /* Sky CTA: dark text on bright sky for clear contrast */
   primary:
-    "bg-[var(--color-sky)] text-[var(--color-primary-navy)] hover:bg-[var(--color-sky-hover)] shadow-[var(--shadow-xs)]",
-  sky: "bg-[var(--color-sky)] text-[var(--color-primary-navy)] hover:bg-[var(--color-sky-hover)] shadow-[var(--shadow-xs)]",
-  navy: "bg-[var(--color-primary-navy)] text-white hover:bg-[#152238] shadow-[var(--shadow-xs)]",
+    "bg-[var(--color-sky)] text-[#07111f] hover:bg-[var(--color-sky-hover)] hover:text-white shadow-[var(--shadow-xs)]",
+  sky: "bg-[var(--color-sky)] text-[#07111f] hover:bg-[var(--color-sky-hover)] hover:text-white shadow-[var(--shadow-xs)]",
+  navy: "bg-[var(--color-primary-navy)] text-white hover:bg-[#0f1c30] shadow-[var(--shadow-xs)]",
   secondary:
-    "bg-[var(--color-primary-navy)] text-white hover:bg-[#152238] shadow-[var(--shadow-xs)]",
+    "bg-[var(--color-primary-navy)] text-white hover:bg-[#0f1c30] shadow-[var(--shadow-xs)]",
   outline:
-    "border border-white/70 text-white bg-transparent hover:bg-white hover:text-[var(--color-primary-navy)]",
+    "border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#07111f]",
   ghost:
-    "text-[var(--color-primary-navy)] hover:bg-[var(--color-muted)]",
-  gold: "bg-[var(--color-sky)] text-[var(--color-primary-navy)] hover:bg-[var(--color-sky-hover)]",
+    "text-[var(--color-heading)] hover:bg-[var(--color-muted)] hover:text-[var(--color-primary-navy)]",
+  gold: "bg-[var(--color-sky)] text-[#07111f] hover:bg-[var(--color-sky-hover)] hover:text-white",
 };
 
 const sizes: Record<ButtonSize, string> = {

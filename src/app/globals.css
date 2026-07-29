@@ -1,27 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  /* Reference palette: deep navy + sky blue */
-  --color-primary-navy: #0b1526;
-  --color-primary-blue: #5bc5f2;
-  --color-sky: #5bc5f2;
-  --color-sky-hover: #3eb6ea;
-  --color-teal: #5bc5f2;
-  --color-gold: #5bc5f2;
+  /* High-contrast finance palette */
+  --color-primary-navy: #07111f;
+  --color-primary-blue: #0ea5e9;
+  --color-sky: #38bdf8;
+  --color-sky-hover: #0ea5e9;
+  --color-sky-bright: #7dd3fc;
+  --color-teal: #0ea5e9;
+  --color-gold: #38bdf8;
   --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-alt: #f5f7fa;
-  --color-surface-dark: #0b1526;
+  --color-surface-alt: #f1f5f9;
+  --color-surface-dark: #07111f;
   --color-white: #ffffff;
-  --color-heading: #1a1f2c;
-  --color-body: #5a6472;
-  --color-success: #16875b;
-  --color-border: #e5e9ef;
-  --color-muted: #f0f4f8;
-  --shadow-xs: 0 2px 8px rgba(11, 21, 38, 0.06);
-  --shadow-sm: 0 10px 28px rgba(11, 21, 38, 0.1);
-  --shadow-md: 0 18px 40px rgba(11, 21, 38, 0.14);
-  --shadow-lg: 0 28px 60px rgba(11, 21, 38, 0.2);
+  --color-heading: #0f172a;
+  --color-body: #334155;
+  --color-muted-text: #64748b;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: #e2e8f0;
+  --color-success: #15803d;
+  --color-border: #cbd5e1;
+  --color-muted: #f1f5f9;
+  --shadow-xs: 0 2px 8px rgba(7, 17, 31, 0.08);
+  --shadow-sm: 0 10px 28px rgba(7, 17, 31, 0.12);
+  --shadow-md: 0 18px 40px rgba(7, 17, 31, 0.16);
+  --shadow-lg: 0 28px 60px rgba(7, 17, 31, 0.22);
   --radius-card: 18px;
   --radius-btn: 999px;
   --header-height: 72px;
@@ -57,11 +61,10 @@ body {
   background: var(--color-bg);
   color: var(--color-body);
   font-family: var(--font-manrope), system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Keep heading defaults in @layer base so Tailwind utilities (e.g. text-white) can override */
 @layer base {
   h1,
   h2,
@@ -74,19 +77,11 @@ body {
     line-height: 1.15;
     letter-spacing: -0.02em;
   }
-}
 
-/* Headings inside dark/white-text panels must stay light */
-.text-white h1,
-.text-white h2,
-.text-white h3,
-.text-white h4,
-.text-white h5,
-.text-white h6,
-[class*="text-white"] h1,
-[class*="text-white"] h2,
-[class*="text-white"] h3 {
-  color: #ffffff;
+  p,
+  li {
+    color: var(--color-body);
+  }
 }
 
 a {
@@ -128,7 +123,36 @@ img {
 }
 
 .text-accent {
-  color: var(--color-sky);
+  color: var(--color-sky-hover);
+}
+
+/* Dark panels: force readable light text (fixes invisible titles) */
+.on-dark,
+.on-dark p,
+.on-dark li,
+.on-dark span,
+.on-dark a,
+.on-dark label,
+.on-dark small {
+  color: var(--color-on-dark-muted);
+}
+
+.on-dark h1,
+.on-dark h2,
+.on-dark h3,
+.on-dark h4,
+.on-dark h5,
+.on-dark h6 {
+  color: var(--color-on-dark) !important;
+}
+
+.on-dark .text-accent,
+.on-dark .accent {
+  color: var(--color-sky-bright) !important;
+}
+
+.on-dark .muted {
+  color: #cbd5e1 !important;
 }
 
 .dot-label {
@@ -136,7 +160,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-body);
 }
 
@@ -145,14 +169,14 @@ img {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
-  background: var(--color-sky);
+  background: var(--color-sky-hover);
   flex-shrink: 0;
 }
 
 .dot-label-light {
-  color: rgba(255, 255, 255, 0.9);
+  color: #f8fafc !important;
 }
 
 .dot-label-light::before {
-  background: var(--color-sky);
+  background: var(--color-sky-bright);
 }

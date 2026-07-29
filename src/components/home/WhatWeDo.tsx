@@ -15,7 +15,7 @@ export function WhatWeDo() {
           <p className="dot-label justify-center">What We Do</p>
           <h2 className="mt-3 text-3xl font-bold text-[var(--color-heading)] md:text-4xl">
             Expert Financial{" "}
-            <span className="text-[var(--color-sky)]">Consulting</span> Services.
+            <span className="text-[var(--color-sky-hover)]">Consulting</span> Services.
           </h2>
           <p className="mt-4 text-[var(--color-body)] leading-relaxed">
             Accessible loan solutions designed for rural and semi-urban

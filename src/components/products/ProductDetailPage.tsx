@@ -12,9 +12,9 @@ import { images } from "@/data/images";
 export function ProductDetailPage({ product }: { product: Product }) {
   return (
     <>
-      <div className="bg-[var(--color-primary-navy)] text-white">
+      <div className="on-dark bg-[var(--color-primary-navy)]">
         <Container className="py-14 md:py-20">
-          <div className="[&_a]:text-white/80 [&_span]:text-white">
+          <div className="[&_a]:text-[#cbd5e1] [&_a:hover]:text-white [&_span]:text-white [&_li]:text-[#94a3b8] [&_svg]:text-[#94a3b8]">
             <Breadcrumb
               items={[
                 { label: "Products", href: "/products" },
@@ -22,12 +22,20 @@ export function ProductDetailPage({ product }: { product: Product }) {
               ]}
             />
           </div>
-          <h1 className="mt-2 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold !text-white">
+          <h1
+            className="mt-2 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold"
+            style={{ color: "#ffffff" }}
+          >
             {product.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/80">{product.shortDescription}</p>
+          <p
+            className="mt-4 max-w-2xl"
+            style={{ color: "#e2e8f0" }}
+          >
+            {product.shortDescription}
+          </p>
           <div className="mt-8">
-            <Button href="/contact" variant="gold">
+            <Button href="/contact" variant="sky">
               Enquire Now
             </Button>
           </div>

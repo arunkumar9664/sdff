@@ -26,7 +26,7 @@ export default function HomePage() {
             <p className="dot-label justify-center">Our Impact</p>
             <h2 className="mt-3 text-3xl font-bold text-[var(--color-heading)] md:text-4xl">
               Progress That{" "}
-              <span className="text-[var(--color-sky)]">Reaches</span> People.
+              <span className="text-[var(--color-sky-hover)]">Reaches</span> People.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
