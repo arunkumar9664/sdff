@@ -3,6 +3,7 @@ import { Share2 } from "lucide-react";
 import { company, companyDescription } from "@/data/company";
 import { footerColumns, legalLinks } from "@/data/navigation";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/layout/Logo";
 import { isConfigured } from "@/lib/utils";
 
 export function Footer() {
@@ -16,16 +17,16 @@ export function Footer() {
 
   return (
     <footer className="on-dark bg-[var(--color-primary-navy)]">
-      <Container className="py-14 md:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-sky)] text-sm font-bold text-[var(--color-primary-navy)]">
-                {company.shortName.slice(0, 2)}
-              </span>
-              <span className="text-sm font-bold leading-tight">{company.name}</span>
+      <Container className="py-12 md:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="sm:col-span-2 lg:col-span-2">
+            <Link href="/" aria-label="Shree Deve Finance Frontiers home">
+              <Logo variant="light" />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
+            <p
+              className="mt-4 max-w-sm text-sm leading-relaxed"
+              style={{ color: "#e2e8f0" }}
+            >
               {companyDescription}
             </p>
             {socials.length > 0 ? (
@@ -39,12 +40,12 @@ export function Footer() {
                     aria-label={label}
                     className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 hover:bg-white/20"
                   >
-                    <Share2 className="h-4 w-4" />
+                    <Share2 className="h-4 w-4" style={{ color: "#ffffff" }} />
                   </a>
                 ))}
               </div>
             ) : (
-              <p className="mt-5 text-xs text-white/45">
+              <p className="mt-5 text-xs" style={{ color: "#94a3b8" }}>
                 Social links will appear when configured.
               </p>
             )}
@@ -52,7 +53,10 @@ export function Footer() {
 
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-sky)]">
+              <h3
+                className="text-xs font-semibold uppercase tracking-[0.16em]"
+                style={{ color: "#7dd3fc" }}
+              >
                 {col.title}
               </h3>
               <ul className="mt-4 space-y-2">
@@ -60,7 +64,8 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/70 hover:text-white"
+                      className="text-sm hover:underline"
+                      style={{ color: "#f1f5f9" }}
                     >
                       {link.label}
                     </Link>
@@ -74,7 +79,7 @@ export function Footer() {
 
       <div className="border-t border-white/10 bg-black/20">
         <Container className="flex flex-col gap-3 py-5 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-white/55">
+          <p className="text-xs" style={{ color: "#cbd5e1" }}>
             © {year} {company.name}. All Rights Reserved.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -82,7 +87,8 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-white/55 hover:text-white"
+                className="text-xs hover:underline"
+                style={{ color: "#cbd5e1" }}
               >
                 {link.label}
               </Link>

@@ -24,8 +24,8 @@ export function WhyChooseUs() {
         <div className="mb-8 max-w-xl">
           <p className="dot-label">Why Choose Us</p>
           <h2 className="mt-3 text-3xl font-bold text-[var(--color-heading)] md:text-4xl lg:text-[2.6rem]">
-            We <span className="text-[var(--color-sky-hover)]">Unlock</span> Your
-            Financial <span className="text-[var(--color-sky-hover)]">Potential</span>.
+            We <span className="text-[#0369a1]">Unlock</span> Your
+            Financial <span className="text-[#0369a1]">Potential</span>.
           </h2>
         </div>
 

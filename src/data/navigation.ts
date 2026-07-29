@@ -112,10 +112,6 @@ export const mainNavigation: NavItem[] = [
       { label: "FAQs", href: "/support/faq" },
     ],
   },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
 ];
 
 export const footerColumns = [

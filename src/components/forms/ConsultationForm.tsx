@@ -135,7 +135,7 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
         <Button
           type="submit"
           variant="sky"
-          className="mt-1 w-full"
+          className="mt-1 w-full !text-[#020617] !bg-[#0ea5e9]"
           disabled={status === "loading"}
         >
           {status === "loading" ? "Submitting..." : "Booking Confirmation"}
@@ -146,4 +146,4 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
 }
 
 const fieldClass =
-  "w-full rounded-full border-0 bg-white px-4 py-3 text-sm text-[var(--color-heading)] outline-none placeholder:text-[var(--color-body)] focus:ring-2 focus:ring-[var(--color-sky)]";
+  "w-full rounded-full border-0 bg-white px-4 py-3 text-sm !text-[#020617] outline-none placeholder:!text-[#64748b] focus:ring-2 focus:ring-[#0ea5e9]";

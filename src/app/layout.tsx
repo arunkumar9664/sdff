@@ -11,10 +11,16 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = createMetadata({
-  title: "Shree Deve Finance Frontiers | Financial Solutions for Growing Ambitions",
-  path: "/",
-});
+export const metadata: Metadata = {
+  ...createMetadata({
+    title: "Shree Deve Finance Frontiers | Financial Solutions for Growing Ambitions",
+    path: "/",
+  }),
+  icons: {
+    icon: "/images/logo.svg",
+    apple: "/images/logo.svg",
+  },
+};
 
 export default function RootLayout({
   children,

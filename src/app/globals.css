@@ -1,31 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* High-contrast finance palette */
-  --color-primary-navy: #07111f;
-  --color-primary-blue: #0ea5e9;
+  /* High-contrast finance palette — readable on light & dark */
+  --color-primary-navy: #061018;
+  --color-primary-blue: #0284c7;
   --color-sky: #38bdf8;
   --color-sky-hover: #0ea5e9;
   --color-sky-bright: #7dd3fc;
-  --color-teal: #0ea5e9;
+  --color-sky-deep: #0369a1;
+  --color-teal: #0284c7;
   --color-gold: #38bdf8;
   --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-alt: #f1f5f9;
-  --color-surface-dark: #07111f;
+  --color-surface-alt: #f8fafc;
+  --color-surface-dark: #061018;
   --color-white: #ffffff;
-  --color-heading: #0f172a;
-  --color-body: #334155;
-  --color-muted-text: #64748b;
+  --color-heading: #020617;
+  --color-body: #1e293b;
+  --color-muted-text: #475569;
   --color-on-dark: #ffffff;
-  --color-on-dark-muted: #e2e8f0;
+  --color-on-dark-muted: #f1f5f9;
   --color-success: #15803d;
   --color-border: #cbd5e1;
   --color-muted: #f1f5f9;
-  --shadow-xs: 0 2px 8px rgba(7, 17, 31, 0.08);
-  --shadow-sm: 0 10px 28px rgba(7, 17, 31, 0.12);
-  --shadow-md: 0 18px 40px rgba(7, 17, 31, 0.16);
-  --shadow-lg: 0 28px 60px rgba(7, 17, 31, 0.22);
+  --shadow-xs: 0 2px 8px rgba(6, 16, 24, 0.08);
+  --shadow-sm: 0 10px 28px rgba(6, 16, 24, 0.12);
+  --shadow-md: 0 18px 40px rgba(6, 16, 24, 0.16);
+  --shadow-lg: 0 28px 60px rgba(6, 16, 24, 0.22);
   --radius-card: 18px;
   --radius-btn: 999px;
   --header-height: 72px;
@@ -78,15 +79,11 @@ body {
     letter-spacing: -0.02em;
   }
 
-  p,
-  li {
-    color: var(--color-body);
+  /* Must stay in @layer so utilities like text-white can override */
+  a {
+    color: inherit;
+    text-decoration: none;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 img {
@@ -95,7 +92,7 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-sky);
+  outline: 2px solid var(--color-sky-hover);
   outline-offset: 2px;
 }
 
@@ -123,18 +120,12 @@ img {
 }
 
 .text-accent {
-  color: var(--color-sky-hover);
+  color: var(--color-sky-deep);
 }
 
-/* Dark panels: force readable light text (fixes invisible titles) */
-.on-dark,
-.on-dark p,
-.on-dark li,
-.on-dark span,
-.on-dark a,
-.on-dark label,
-.on-dark small {
-  color: var(--color-on-dark-muted);
+/* ===== Dark surfaces: never hide text ===== */
+.on-dark {
+  color: #f8fafc;
 }
 
 .on-dark h1,
@@ -143,16 +134,36 @@ img {
 .on-dark h4,
 .on-dark h5,
 .on-dark h6 {
-  color: var(--color-on-dark) !important;
+  color: #ffffff !important;
+}
+
+.on-dark > p,
+.on-dark p:not(.btn),
+.on-dark li {
+  color: #e2e8f0;
 }
 
 .on-dark .text-accent,
-.on-dark .accent {
-  color: var(--color-sky-bright) !important;
+.on-dark .accent,
+.on-dark [data-accent] {
+  color: #7dd3fc !important;
 }
 
-.on-dark .muted {
-  color: #cbd5e1 !important;
+.on-dark .muted,
+.on-dark .on-dark-muted {
+  color: #e2e8f0 !important;
+}
+
+/* Button label colors come from Button.tsx (!important utilities) */
+.on-dark a.btn svg,
+.on-dark button.btn svg {
+  color: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .dot-label {
@@ -169,14 +180,14 @@ img {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
-  background: var(--color-sky-hover);
+  background: var(--color-sky-deep);
   flex-shrink: 0;
 }
 
 .dot-label-light {
-  color: #f8fafc !important;
+  color: #ffffff !important;
 }
 
 .dot-label-light::before {
-  background: var(--color-sky-bright);
+  background: #7dd3fc !important;
 }

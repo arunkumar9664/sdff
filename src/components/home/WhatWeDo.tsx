@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { products, productImages } from "@/data/products";
 import { images } from "@/data/images";
 
@@ -15,7 +16,7 @@ export function WhatWeDo() {
           <p className="dot-label justify-center">What We Do</p>
           <h2 className="mt-3 text-3xl font-bold text-[var(--color-heading)] md:text-4xl">
             Expert Financial{" "}
-            <span className="text-[var(--color-sky-hover)]">Consulting</span> Services.
+            <span className="text-[#0369a1]">Consulting</span> Services.
           </h2>
           <p className="mt-4 text-[var(--color-body)] leading-relaxed">
             Accessible loan solutions designed for rural and semi-urban
@@ -23,7 +24,7 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((product, index) => {
             const isCenter = index === 1;
             return (
@@ -65,13 +66,10 @@ export function WhatWeDo() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            href="/products"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary-navy)] px-7 py-3 text-sm font-semibold text-white hover:bg-[#152238]"
-          >
+          <Button href="/products" variant="navy">
             View All Products
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Button>
         </div>
       </Container>
     </Section>

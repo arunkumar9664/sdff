@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { company } from "@/data/company";
 import { mainNavigation } from "@/data/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/layout/Logo";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -33,10 +33,10 @@ export function Header() {
 
   const overlay = isHome && !scrolled && !mobileOpen;
   const linkClass = cn(
-    "rounded-lg px-3 py-2 text-sm font-medium transition",
+    "rounded-lg px-2.5 xl:px-3 py-2 text-sm font-semibold transition whitespace-nowrap",
     overlay
-      ? "text-white/90 hover:bg-white/10 hover:text-white"
-      : "text-[var(--color-heading)] hover:bg-[var(--color-muted)] hover:text-[var(--color-primary-navy)]",
+      ? "text-white hover:bg-white/15 hover:text-white"
+      : "text-[#0f172a] hover:bg-[var(--color-muted)] hover:text-[#0369a1]",
   );
 
   return (
@@ -48,29 +48,15 @@ export function Header() {
           : "border-b border-[var(--color-border)] bg-white/95 shadow-[var(--shadow-xs)] backdrop-blur",
       )}
     >
-      <Container className="flex h-[var(--header-height)] items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <span
-            className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold",
-              overlay
-                ? "bg-[var(--color-sky)] text-[var(--color-primary-navy)]"
-                : "bg-[var(--color-primary-navy)] text-white",
-            )}
-          >
-            {company.shortName.slice(0, 2)}
-          </span>
-          <span
-            className={cn(
-              "hidden sm:block max-w-[200px] text-sm font-bold leading-tight lg:max-w-none",
-              overlay ? "text-white" : "text-[var(--color-heading)]",
-            )}
-          >
-            {company.name}
-          </span>
+      <Container className="flex h-[var(--header-height)] items-center justify-between gap-2 sm:gap-4">
+        <Link href="/" className="shrink-0" aria-label="Shree Deve Finance Frontiers home">
+          <Logo variant={overlay ? "light" : "dark"} />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <nav
+          className="hidden lg:flex items-center gap-0.5 xl:gap-1"
+          aria-label="Primary"
+        >
           {mainNavigation.map((item) => (
             <div
               key={item.label}
@@ -94,7 +80,7 @@ export function Header() {
                   </button>
                   {openMenu === item.label ? (
                     <div className="absolute left-0 top-full pt-2">
-                      <div className="min-w-[260px] rounded-2xl border border-[var(--color-border)] bg-white p-2 shadow-[var(--shadow-md)]">
+                      <div className="min-w-[240px] max-w-[min(320px,90vw)] rounded-2xl border border-[var(--color-border)] bg-white p-2 shadow-[var(--shadow-md)]">
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
@@ -102,11 +88,11 @@ export function Header() {
                             className="block rounded-xl px-3 py-2.5 hover:bg-[var(--color-muted)]"
                             onClick={() => setOpenMenu(null)}
                           >
-                            <span className="block text-sm font-semibold text-[var(--color-heading)]">
+                            <span className="block text-sm font-semibold text-[#020617]">
                               {child.label}
                             </span>
                             {child.description ? (
-                              <span className="mt-0.5 block text-xs text-[var(--color-body)]">
+                              <span className="mt-0.5 block text-xs text-[#334155]">
                                 {child.description}
                               </span>
                             ) : null}
@@ -125,22 +111,22 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <Button
             href="/contact"
             size="sm"
             variant="sky"
             className="hidden sm:inline-flex"
           >
-            Get Detail
+            Contact Us
           </Button>
           <button
             type="button"
             className={cn(
               "inline-flex h-10 w-10 items-center justify-center rounded-full border lg:hidden",
               overlay
-                ? "border-white/40 text-white"
-                : "border-[var(--color-border)] text-[var(--color-heading)] bg-white",
+                ? "border-white/50 text-white"
+                : "border-[var(--color-border)] text-[#020617] bg-white",
             )}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -153,7 +139,7 @@ export function Header() {
 
       {mobileOpen ? (
         <div className="fixed inset-x-0 top-[var(--header-height)] bottom-0 z-40 overflow-y-auto bg-white lg:hidden">
-          <nav className="space-y-1 px-4 py-4" aria-label="Mobile">
+          <nav className="space-y-1 px-4 py-4 pb-24" aria-label="Mobile">
             {mainNavigation.map((item) => (
               <div
                 key={item.label}
@@ -161,7 +147,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="block py-2 text-base font-semibold text-[var(--color-heading)]"
+                  className="block py-2.5 text-base font-semibold text-[#020617]"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -172,7 +158,7 @@ export function Header() {
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block py-1.5 text-sm text-[var(--color-body)]"
+                        className="block py-2 text-sm text-[#334155]"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}
@@ -184,7 +170,7 @@ export function Header() {
             ))}
             <div className="pt-4" onClick={() => setMobileOpen(false)}>
               <Button href="/contact" className="w-full">
-                Get Detail
+                Contact Us
               </Button>
             </div>
           </nav>

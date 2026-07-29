@@ -34,7 +34,7 @@ export function DocumentCard({ doc }: { doc: DocumentItem }) {
             <a
               href={doc.file}
               download
-              className="inline-flex items-center gap-1.5 rounded-[var(--radius-btn)] bg-[var(--color-primary-navy)] px-3 py-2 text-sm font-medium text-white hover:bg-[var(--color-primary-blue)]"
+              className="inline-flex items-center gap-1.5 rounded-[var(--radius-btn)] bg-[#061018] px-3 py-2 text-sm font-medium !text-white hover:bg-[#0284c7]"
             >
               <Download className="h-4 w-4" aria-hidden />
               Download

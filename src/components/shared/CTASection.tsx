@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -8,7 +7,7 @@ export function CTASection({
   title,
   description,
   primaryHref = "/contact",
-  primaryLabel = "Get Detail",
+  primaryLabel = "Contact Us",
   secondaryHref,
   secondaryLabel,
   className,
@@ -54,12 +53,9 @@ export function CTASection({
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Button>
               {secondaryHref && secondaryLabel ? (
-                <Link
-                  href={secondaryHref}
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-white px-7 py-3.5 font-semibold text-white hover:bg-white hover:text-[#07111f] transition"
-                >
+                <Button href={secondaryHref} variant="outlineOnDark" size="lg">
                   {secondaryLabel}
-                </Link>
+                </Button>
               ) : null}
             </div>
           </div>
