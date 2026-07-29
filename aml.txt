@@ -1,0 +1,1358 @@
+# PROJECT: Shree Deve Finance Frontiers Corporate Website
+
+You are a Senior Full-Stack Engineer, UI/UX Designer, Next.js Architect and Technical SEO specialist.
+
+Build a complete production-quality corporate financial-services website for:
+
+SHREE DEVE FINANCE FRONTIERS
+
+Reference website:
+https://www.digamberfinance.com/
+
+Study the reference website to understand its information architecture, business domain, content hierarchy, loan/product presentation, company information, leadership presentation, customer stories, investor relations, careers, CSR/impact, customer awareness, grievance resources, policies, regulatory information and footer structure.
+
+IMPORTANT:
+
+Do NOT create a pixel-perfect copy of the reference website.
+
+Do NOT copy its branding, logo, images, customer stories, leadership information, company history, regulatory claims, financial numbers, branch numbers, AUM, awards, registration information or copyrighted text.
+
+Use it only as a functional and information-architecture reference.
+
+Create a completely original, premium and modern design for Shree Deve Finance Frontiers.
+
+Where company-specific information has not been supplied, use clearly identifiable placeholders or centralized configuration values rather than inventing facts.
+
+---
+
+# 1. TECHNOLOGY STACK
+
+Use:
+
+* Next.js latest stable version
+* App Router
+* TypeScript
+* React
+* Tailwind CSS
+* shadcn/ui where useful
+* Lucide React icons
+* Framer Motion for restrained animations
+* Next/Image
+* Next/Font
+
+The website must be:
+
+* responsive
+* SEO optimized
+* accessible
+* production-ready
+* mobile-first
+* performant
+* modular
+* easy to maintain
+* secure
+
+Do not add a backend unless required.
+
+Store static website content in typed TypeScript data/config files so it can later be replaced with CMS/API content.
+
+---
+
+# 2. BRAND
+
+Company name:
+
+Shree Deve Finance Frontiers
+
+Create a professional financial-services visual identity.
+
+The brand should communicate:
+
+Trust
+Financial Inclusion
+Growth
+Transparency
+Community
+Responsibility
+Progress
+Stability
+
+Suggested palette:
+
+Primary Navy: #123B5D
+Primary Blue: #1E6FA8
+Teal Accent: #12A594
+Warm Gold: #D8A73C
+Background: #F7F9FC
+White: #FFFFFF
+Heading: #17212B
+Body: #596675
+Success: #16875B
+
+Implement colors as CSS variables/design tokens.
+
+Do not scatter hard-coded colors throughout components.
+
+Typography:
+
+Use either Inter or Manrope through next/font.
+
+Use strong typography hierarchy with large headings, readable body text and generous spacing.
+
+---
+
+# 3. GLOBAL DESIGN LANGUAGE
+
+The website should feel like a mature Indian NBFC/MFI/financial institution rather than a fintech loan app.
+
+Design characteristics:
+
+* clean
+* trustworthy
+* institutional
+* contemporary
+* spacious
+* human-centered
+* premium but accessible
+
+Use:
+
+* 12-16px card radius
+* subtle shadows
+* soft borders
+* generous whitespace
+* responsive grids
+* restrained gradients
+* high-quality Indian entrepreneurship imagery
+* clear CTAs
+* subtle micro-interactions
+
+Avoid:
+
+* excessive gradients
+* neon fintech styling
+* excessive glassmorphism
+* huge animations
+* clutter
+* generic dashboard styling
+
+---
+
+# 4. PROJECT ARCHITECTURE
+
+Create a scalable structure similar to:
+
+src/
+app/
+layout.tsx
+page.tsx
+
+```
+about/
+  page.tsx
+
+leadership/
+  page.tsx
+
+presence/
+  page.tsx
+
+products/
+  page.tsx
+  jlg-loan/
+    page.tsx
+  individual-micro-loan/
+    page.tsx
+  small-business-loan/
+    page.tsx
+  agriculture-loan/
+    page.tsx
+
+customer-stories/
+  page.tsx
+
+impact/
+  page.tsx
+
+investors/
+  page.tsx
+  annual-reports/
+    page.tsx
+  financial-information/
+    page.tsx
+  corporate-governance/
+    page.tsx
+  policies/
+    page.tsx
+  disclosures/
+    page.tsx
+
+careers/
+  page.tsx
+  openings/
+    page.tsx
+
+support/
+  page.tsx
+  grievance/
+    page.tsx
+  customer-awareness/
+    page.tsx
+  fraud-awareness/
+    page.tsx
+  faq/
+    page.tsx
+
+contact/
+  page.tsx
+
+privacy-policy/
+  page.tsx
+
+terms/
+  page.tsx
+```
+
+components/
+layout/
+home/
+about/
+products/
+investors/
+careers/
+support/
+shared/
+ui/
+
+data/
+company.ts
+navigation.ts
+products.ts
+leadership.ts
+statistics.ts
+testimonials.ts
+careers.ts
+reports.ts
+faqs.ts
+
+lib/
+utils.ts
+seo.ts
+
+types/
+
+public/
+images/
+icons/
+documents/
+
+---
+
+# 5. GLOBAL HEADER
+
+Create a sticky professional header.
+
+Desktop navigation:
+
+Logo
+
+About
+Products
+Impact
+Investor Relations
+Careers
+Customer Support
+Contact
+
+Primary CTA:
+
+Enquire Now
+
+Create dropdown/mega menus for:
+
+About
+Products
+Investor Relations
+Customer Support
+
+Header states:
+
+top
+scrolled
+mobile
+
+When scrolling, apply a subtle shadow/border.
+
+Create a clean mobile drawer navigation.
+
+The navigation must be keyboard accessible.
+
+---
+
+# 6. HOMEPAGE
+
+Create a high-impact homepage.
+
+Sections must appear in this order.
+
+## HERO
+
+Two-column desktop layout.
+
+LEFT:
+
+Eyebrow:
+
+SHREE DEVE FINANCE FRONTIERS
+
+H1:
+
+Finance That Moves Dreams Forward
+
+Description:
+
+Accessible financial solutions designed to help individuals, entrepreneurs and communities build stronger futures.
+
+Buttons:
+
+Explore Our Products
+Know About Us
+
+Add trust indicators:
+
+Responsible Lending
+Transparent Processes
+Customer First
+
+RIGHT:
+
+Use a strong Indian entrepreneur / community / small-business image.
+
+Use subtle decorative background shapes.
+
+Do not make the hero visually noisy.
+
+---
+
+# 7. COMPANY INTRODUCTION
+
+Two-column image/content section.
+
+Eyebrow:
+
+ABOUT SHREE DEVE FINANCE FRONTIERS
+
+Heading:
+
+Building Financial Possibilities
+
+Write approximately 100-150 words of professional placeholder company copy describing a financial institution focused on responsible lending, entrepreneurship, underserved communities and financial inclusion.
+
+Do NOT claim:
+
+RBI registration
+NBFC registration
+specific founding year
+customer numbers
+branch numbers
+states
+awards
+
+unless supplied in company configuration.
+
+Show four value points:
+
+Customer Focused
+Transparent
+Accessible
+Responsible
+
+CTA:
+
+Discover Our Story
+
+---
+
+# 8. IMPACT STATISTICS
+
+Heading:
+
+Our Impact at a Glance
+
+Create four statistic cards:
+
+Branches
+Customers Served
+Team Members
+Assets Under Management
+
+All values must come from:
+
+data/statistics.ts
+
+Initially use values such as:
+
+"--"
+
+or configurable placeholders.
+
+Do not invent operational statistics.
+
+Implement animated number counters only when valid numeric values are configured.
+
+---
+
+# 9. FINANCIAL PRODUCTS
+
+Heading:
+
+Financial Solutions for Every Ambition
+
+Create product cards for:
+
+Joint Liability Group Loan
+Individual Micro Loan
+Small Business Loan
+Agriculture Loan
+
+Each card contains:
+
+Icon
+Title
+Short description
+3 benefit points
+Learn More CTA
+
+Use original content.
+
+Do not reproduce reference website wording.
+
+Cards should have:
+
+hover elevation
+subtle icon animation
+accessible links
+
+Each product should link to a dedicated product page.
+
+---
+
+# 10. PRODUCT DETAIL PAGE TEMPLATE
+
+Build a reusable ProductDetailPage.
+
+Each product page should contain:
+
+Breadcrumb
+Hero
+Product introduction
+Who is it for?
+Key benefits
+Possible use cases
+Eligibility placeholder
+Documents placeholder
+Loan journey
+FAQs
+Contact CTA
+
+IMPORTANT:
+
+Do not invent:
+
+interest rates
+processing fees
+loan limits
+tenure
+eligibility requirements
+regulatory terms
+
+Store these as:
+
+"Contact our team for current details"
+
+or clearly marked configurable placeholders.
+
+---
+
+# 11. WHY CHOOSE US
+
+Heading:
+
+Why Shree Deve Finance Frontiers?
+
+Cards:
+
+Accessible Finance
+
+Financial solutions designed around real customer needs.
+
+Transparent Process
+
+Clear information and communication throughout the customer journey.
+
+Responsible Lending
+
+Customer suitability and responsible financial practices at the center of lending.
+
+Local Understanding
+
+Solutions informed by the realities of communities and entrepreneurs.
+
+Use icons and subtle animations.
+
+---
+
+# 12. CUSTOMER JOURNEY
+
+Heading:
+
+Your Journey With Us
+
+Build horizontal desktop / vertical mobile timeline.
+
+Steps:
+
+01
+Understand Your Need
+
+02
+Connect With Our Team
+
+03
+Application & Verification
+
+04
+Financial Assessment
+
+05
+Loan Processing
+
+06
+Ongoing Support
+
+Add disclaimer:
+
+Actual process and requirements may vary by product and customer profile.
+
+---
+
+# 13. CUSTOMER STORIES
+
+Heading:
+
+Real People. Real Progress.
+
+Create testimonial/customer-story cards.
+
+Use placeholder customers:
+
+Customer Name
+Location
+Business
+Story
+Image
+
+Do not use real Digamber Finance customers.
+
+Create 4-6 fictional placeholders clearly marked in the data file as demo content so production teams know to replace them.
+
+Build a responsive carousel.
+
+Include:
+
+photo
+story heading
+short story
+name
+location
+business category
+
+CTA:
+
+View Customer Stories
+
+---
+
+# 14. SOCIAL IMPACT
+
+Create an editorial-style section.
+
+Eyebrow:
+
+FINANCE WITH PURPOSE
+
+Heading:
+
+Creating Impact Beyond Finance
+
+Areas:
+
+Financial Literacy
+Women Entrepreneurship
+Education
+Community Development
+
+Use image + cards layout.
+
+CTA:
+
+Explore Our Impact
+
+---
+
+# 15. OUR PRESENCE
+
+Create a section:
+
+Growing Closer to Our Customers
+
+Provide an India map placeholder.
+
+Do not claim operations in any state until configuration is supplied.
+
+Build data model:
+
+state
+districts
+branches
+isActive
+
+If there is no presence data, show:
+
+"Our network information will be available here soon."
+
+Make architecture ready for future interactive map.
+
+---
+
+# 16. LEADERSHIP
+
+Homepage:
+
+show maximum 3-4 leadership profiles.
+
+Dedicated leadership page:
+
+show complete team.
+
+Leadership model:
+
+name
+designation
+image
+bio
+linkedin optional
+
+Use placeholders.
+
+Never use Digamber Finance leadership profiles.
+
+Card interaction:
+
+hover image scale
+View Profile
+
+Profile can open modal or dedicated section.
+
+---
+
+# 17. INVESTOR RELATIONS
+
+Create professional investor section.
+
+Heading:
+
+Transparency Builds Trust
+
+Description explaining commitment to transparent corporate information.
+
+Cards:
+
+Annual Reports
+Financial Information
+Corporate Governance
+Codes & Policies
+Regulatory Disclosures
+Credit Ratings
+
+Do not fabricate documents.
+
+If files do not exist, display:
+
+"Documents will be published here when available."
+
+Create reusable DocumentList component supporting:
+
+title
+financialYear
+category
+file
+publishedDate
+
+with:
+
+View
+Download
+
+actions.
+
+---
+
+# 18. CUSTOMER SUPPORT
+
+Create support landing page.
+
+Cards:
+
+Customer Grievance
+Customer Awareness
+Fraud Awareness
+FAQs
+Contact Support
+
+Use a calm and trustworthy design.
+
+---
+
+# 19. FRAUD AWARENESS
+
+Create an important fraud-awareness section.
+
+Heading:
+
+Stay Alert. Stay Protected.
+
+Explain general fraud prevention practices:
+
+Never share OTPs.
+Verify official communication channels.
+Do not pay unauthorized agents.
+Do not share banking credentials.
+Report suspicious communication.
+
+Do NOT claim the company has experienced a specific fraud incident.
+
+Create prominent warning card.
+
+---
+
+# 20. GRIEVANCE PAGE
+
+Create a grievance-redressal page.
+
+Include placeholder sections:
+
+Customer Support
+Grievance Officer
+Escalation Officer
+Regulatory Escalation
+
+Contact values must come from configuration.
+
+Do not invent officer names, email addresses or phone numbers.
+
+Create a contact form:
+
+Name
+Mobile
+Email
+Customer ID optional
+Category
+Message
+Consent checkbox
+
+Add validation.
+
+---
+
+# 21. CAREERS
+
+Create careers landing page.
+
+Hero:
+
+Build Your Career.
+Create Meaningful Impact.
+
+Sections:
+
+Why Join Us
+Our Culture
+Learning & Growth
+Life at Shree Deve
+Current Opportunities
+
+Create job listing cards.
+
+Fields:
+
+Job title
+Department
+Location
+Experience
+Employment type
+
+Buttons:
+
+View Details
+Apply
+
+Demo jobs must be clearly marked placeholders.
+
+---
+
+# 22. CONTACT PAGE
+
+Create professional contact page.
+
+Left:
+
+Registered Office
+
+[Address placeholder]
+
+Phone
+[Phone placeholder]
+
+Email
+[Email placeholder]
+
+Business Hours
+[Hours placeholder]
+
+Right:
+
+Contact form.
+
+Fields:
+
+Full Name
+Mobile Number
+Email
+Subject
+Message
+
+CTA:
+
+Send Message
+
+Add map placeholder.
+
+Do not invent an address.
+
+---
+
+# 23. FOOTER
+
+Create large institutional footer.
+
+Column 1:
+
+Logo
+Short company description
+Social links
+
+Column 2:
+
+About
+Company Overview
+Leadership
+Vision & Mission
+Our Presence
+
+Column 3:
+
+Products
+JLG Loan
+Individual Micro Loan
+Small Business Loan
+Agriculture Loan
+
+Column 4:
+
+Support
+Contact
+Grievance
+Customer Awareness
+Fraud Awareness
+FAQs
+
+Column 5:
+
+Investor Relations
+Annual Reports
+Governance
+Policies
+Disclosures
+
+Bottom:
+
+Privacy Policy
+Terms & Conditions
+Disclaimer
+
+Copyright:
+
+© currentYear Shree Deve Finance Frontiers. All Rights Reserved.
+
+Use dynamic current year.
+
+---
+
+# 24. COMPANY CONFIGURATION
+
+Create:
+
+data/company.ts
+
+Example:
+
+export const company = {
+name: "Shree Deve Finance Frontiers",
+shortName: "SDFF",
+
+tagline: "Finance That Moves Dreams Forward",
+
+legalName: "",
+
+cin: "",
+
+registeredOffice: "",
+
+phone: "",
+
+email: "",
+
+grievanceEmail: "",
+
+website: "",
+
+regulatoryStatus: "",
+
+social: {
+linkedin: "",
+facebook: "",
+instagram: "",
+youtube: ""
+}
+};
+
+All company information across the website must read from this central configuration where practical.
+
+---
+
+# 25. SEO
+
+Implement metadata for every page.
+
+Homepage title:
+
+Shree Deve Finance Frontiers | Financial Solutions for Growing Ambitions
+
+Description:
+
+Shree Deve Finance Frontiers provides responsible and accessible financial solutions designed to support individuals, entrepreneurs and communities.
+
+Add:
+
+canonical metadata
+Open Graph metadata
+Twitter metadata
+robots
+sitemap.xml
+
+Use Next.js Metadata API.
+
+Create:
+
+app/sitemap.ts
+app/robots.ts
+
+Add Organization structured data only using verified/configured information.
+
+Add FAQ structured data to FAQ pages.
+
+Do not include fake reviews or ratings in structured data.
+
+---
+
+# 26. ACCESSIBILITY
+
+Follow WCAG 2.1 AA principles.
+
+Ensure:
+
+semantic HTML
+keyboard navigation
+visible focus states
+accessible mobile navigation
+proper heading hierarchy
+form labels
+ARIA only when needed
+sufficient contrast
+descriptive alt text
+reduced-motion support
+
+---
+
+# 27. PERFORMANCE
+
+Target:
+
+Lighthouse Performance > 90
+Accessibility > 95
+Best Practices > 95
+SEO > 95
+
+Use:
+
+Next/Image
+WebP/AVIF where possible
+lazy loading
+server components by default
+minimal client JavaScript
+dynamic imports only when useful
+
+Do not mark components "use client" unnecessarily.
+
+---
+
+# 28. ANIMATIONS
+
+Use Framer Motion sparingly.
+
+Implement:
+
+hero fade/slide
+section reveal
+card hover
+number animation
+testimonial transitions
+mobile menu transition
+
+Animations should be subtle.
+
+Respect:
+
+prefers-reduced-motion.
+
+---
+
+# 29. RESPONSIVE BREAKPOINT BEHAVIOR
+
+Design for:
+
+320px+
+375px
+430px
+768px
+1024px
+1280px
+1440px+
+
+Desktop:
+
+large spacious layouts.
+
+Tablet:
+
+2-column grids.
+
+Mobile:
+
+single-column layouts.
+
+Ensure:
+
+no horizontal scrolling
+comfortable touch targets
+responsive typography
+mobile navigation
+proper card spacing
+
+---
+
+# 30. REUSABLE COMPONENTS
+
+Build reusable components:
+
+Container
+Section
+SectionHeader
+Button
+Card
+Badge
+Breadcrumb
+PageHero
+Header
+MegaMenu
+MobileMenu
+Footer
+ProductCard
+StatCard
+LeadershipCard
+TestimonialCard
+ImpactCard
+DocumentCard
+JobCard
+FAQAccordion
+ContactForm
+GrievanceForm
+CTASection
+
+Avoid duplicating UI markup.
+
+---
+
+# 31. FORMS
+
+Use React Hook Form + Zod if dependencies are acceptable.
+
+Validate:
+
+required fields
+email
+mobile
+message length
+consent
+
+Add:
+
+loading state
+success state
+error state
+
+For now submit to a mock handler or server action placeholder.
+
+Do not create a fake production API.
+
+---
+
+# 32. CONTENT STRATEGY
+
+The writing should feel:
+
+professional
+simple
+trustworthy
+human
+inclusive
+optimistic
+
+Avoid:
+
+aggressive sales language
+"instant loan" language
+guaranteed approval claims
+guaranteed returns
+unverified regulatory claims
+
+Primary audience:
+
+rural and semi-urban customers
+micro entrepreneurs
+women entrepreneurs
+small business owners
+investors
+partners
+job candidates
+
+---
+
+# 33. IMAGE STRATEGY
+
+Use authentic Indian imagery representing:
+
+women entrepreneurs
+small shops
+tailoring
+agriculture
+dairy
+local businesses
+rural communities
+financial literacy
+employees helping customers
+
+Do not copy images from Digamber Finance.
+
+Create:
+
+public/images/home/
+public/images/products/
+public/images/leadership/
+public/images/customers/
+public/images/impact/
+
+Use descriptive alt text.
+
+If final assets are unavailable, use safe remote placeholders and clearly document where they must be replaced.
+
+---
+
+# 34. UI STATES
+
+Implement polished:
+
+loading states
+empty states
+404 page
+form errors
+success messages
+document empty state
+career empty state
+
+Create:
+
+app/not-found.tsx
+
+Use skeletons only where genuinely useful.
+
+---
+
+# 35. SECURITY
+
+Implement standard frontend security practices.
+
+Avoid:
+
+dangerouslySetInnerHTML
+exposed secrets
+sensitive environment variables in client bundles
+unvalidated form payloads
+
+Add reasonable security headers through Next.js configuration if appropriate.
+
+Validate server-side form input if server actions/API routes are eventually implemented.
+
+---
+
+# 36. CODE QUALITY
+
+Use:
+
+TypeScript strict mode
+ESLint
+clean component architecture
+semantic naming
+typed data models
+
+Avoid:
+
+any
+giant page components
+duplicate code
+inline static datasets inside components
+unnecessary dependencies
+
+Keep components small and reusable.
+
+---
+
+# 37. README
+
+Create a complete README containing:
+
+Project overview
+Technology stack
+Installation
+Development
+Build
+Folder architecture
+Content management
+Company configuration
+Replacing images
+Adding products
+Adding leadership
+Adding jobs
+Adding investor documents
+Deployment
+
+Commands:
+
+npm install
+npm run dev
+npm run build
+npm start
+
+---
+
+# 38. FINAL VALIDATION
+
+Before completing implementation:
+
+Run lint.
+
+Run TypeScript checks.
+
+Run production build.
+
+Resolve all errors.
+
+Check every route.
+
+Check all navigation links.
+
+Check mobile responsiveness.
+
+Check image aspect ratios.
+
+Check forms.
+
+Check empty states.
+
+Check accessibility.
+
+Check metadata.
+
+Check that no Digamber Finance branding, leadership, customer stories, regulatory claims, addresses, phone numbers, company numbers or copyrighted content remain in the project.
+
+---
+
+# 39. IMPLEMENTATION ORDER
+
+Implement in phases.
+
+PHASE 1
+Initialize Next.js project, Tailwind, fonts, design tokens and project architecture.
+
+PHASE 2
+Build Header, Footer, Container, Section, Buttons and shared UI.
+
+PHASE 3
+Build complete homepage.
+
+PHASE 4
+Build About and Leadership pages.
+
+PHASE 5
+Build Products landing page and product detail template.
+
+PHASE 6
+Build Customer Stories, Impact and Presence.
+
+PHASE 7
+Build Investor Relations and document architecture.
+
+PHASE 8
+Build Careers and job listings.
+
+PHASE 9
+Build Customer Support, FAQ, Grievance and Fraud Awareness.
+
+PHASE 10
+Build Contact, Privacy, Terms, Disclaimer and 404.
+
+PHASE 11
+Implement SEO, sitemap, robots and structured data.
+
+PHASE 12
+Responsive/accessibility/performance polish.
+
+PHASE 13
+Run lint, TypeScript and production build and fix all problems.
+
+Do not stop after generating a homepage.
+
+Build the complete website architecture and all specified pages.
+
+When business-specific information is unavailable, use centralized placeholders and add TODO comments identifying what information the Shree Deve Finance Frontiers team needs to provide.
