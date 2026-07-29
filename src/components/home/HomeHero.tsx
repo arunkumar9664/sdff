@@ -39,10 +39,10 @@ export function HomeHero() {
           <p className="dot-label dot-label-light">
             Professional Financial Consulting
           </p>
-          <h1 className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] text-white md:text-5xl lg:text-[3.35rem]">
-            Expert <span className="text-[var(--color-sky)]">Financial</span>{" "}
+          <h1 className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] !text-white md:text-5xl lg:text-[3.35rem]">
+            Expert <span className="!text-[var(--color-sky)]">Financial</span>{" "}
             Consulting For Long-Term{" "}
-            <span className="text-[var(--color-sky)]">Stability</span>.
+            <span className="!text-[var(--color-sky)]">Stability</span>.
           </h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
             Responsible microfinance for rural and semi-urban India—JLG,

@@ -34,7 +34,7 @@ export function CTASection({
             aria-hidden
           />
           <div className="relative mx-auto max-w-2xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold !text-white">
               {title}
             </h2>
             {description ? (

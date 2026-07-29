@@ -22,7 +22,7 @@ export function ProductDetailPage({ product }: { product: Product }) {
               ]}
             />
           </div>
-          <h1 className="mt-2 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          <h1 className="mt-2 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold !text-white">
             {product.name}
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">{product.shortDescription}</p>

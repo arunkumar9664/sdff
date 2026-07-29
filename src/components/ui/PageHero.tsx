@@ -36,11 +36,11 @@ export function PageHero({
             <Breadcrumb items={breadcrumb} />
           </div>
         ) : null}
-        <h1 className="max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+        <h1 className="max-w-3xl text-3xl md:text-4xl lg:text-5xl font-bold !text-white">
           {title}
         </h1>
         {description ? (
-          <p className="mt-4 max-w-2xl text-base md:text-lg text-white/80 leading-relaxed">
+          <p className="mt-4 max-w-2xl text-base md:text-lg !text-white/80 leading-relaxed">
             {description}
           </p>
         ) : null}
